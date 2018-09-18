@@ -36,6 +36,7 @@ void __updateProcBar(ProcBar* bar)
 {
     static char index[6] = "-\\|/\0";
     printf("[%s] [%.2f%%][%c]\r", bar->buf, bar->percent * 100, index[bar->i++ % 4]);
+//    fprintf(stderr, "[%s] [%.2f%%][%c]\r", bar->buf, bar->percent * 100, index[bar->i++ % 4]);
     fflush(stdout);//刷新缓冲区
 }
 
